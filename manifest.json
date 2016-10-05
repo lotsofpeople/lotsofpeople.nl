@@ -1,0 +1,7 @@
+{
+  "name": "lotsofpeople-nl",
+  "short_name": "lotsofpeople-nl",
+  "description": "Lots of People Organisation Website",
+  "start_url": "/",
+  "display": "standalone"
+}

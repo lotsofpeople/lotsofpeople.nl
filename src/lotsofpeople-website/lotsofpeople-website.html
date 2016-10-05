@@ -1,0 +1,255 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="lotsofpeople-website">
+  <template>
+    <style>
+      @font-face {
+        font-family: 'Circular';
+        src: url(../lotsofpeople-styles/CircularStd-Book.woff);
+      }
+      @font-face {
+        font-family: 'Circular-Bold';
+        src: url(../lotsofpeople-styles/CircularStd-Bold.woff);
+      }
+
+      :host {
+
+        --text-color: rgba(20,20,20,0.8);
+        --text-size: 24px;
+
+        display: flex;
+        background-color: #1769ff;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        color: var(--text-color);
+
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      @media screen and (max-device-width: 767px) {
+        :host {
+        --text-size: 20px;
+        }
+      }
+
+      header {
+        flex: 1;
+        max-height: 144px;
+        display: flex;
+        align-items: center;
+      }
+
+      header nav {
+        flex: 1;
+        display: flex;
+/*        width: 1080px;
+        justify-content: flex-start;
+        align-items: flex-start;
+*/      }
+
+      header nav h3 {
+        color: white;
+        font-family: 'Circular';
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: var(--text-size);
+      }
+
+      main {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 18px;
+      }
+
+      h1 {
+        font-family: 'Circular';
+        font-weight: 400;
+        font-size: var(--text-size);
+        margin: 12px 0;
+        max-width: 600px;
+      }
+
+      @media screen and (max-device-width: 767px) {
+        h1 br {
+          display: none;
+        }
+      }
+
+      h2 {
+        font-family: 'Circular-Bold';
+        font-weight: 600;
+        font-size: 72px;
+        flex-direction: column;
+        justify-content: flex-end;
+        line-height: 1.2;
+        margin-top: -18px;
+      }
+
+      h2 span {
+        display: inline-block;
+        text-transform: uppercase;
+        border-bottom: 8px solid rgba(20,20,20,0.7);
+        margin:0;
+        padding: 0 0 6px 0;
+        line-height: 1;
+      }
+
+      @media screen and (max-device-width: 767px) {
+        h2 {
+          font-size: 28px;
+          line-height: 1.4;
+        }
+        h2 span {
+          padding-bottom: 3px;
+          border-bottom-width: 4px;
+        }
+      }
+
+      footer {
+        display: flex;
+        flex: 1;
+        font-family: 'Circular';
+        font-weight: 400;
+        font-size: var(--text-size);
+        flex-direction: column;
+        max-height: 172px;
+        padding-bottom: 36px;
+      }
+
+      footer nav {
+        max-height: 100px;
+        display: flex;
+        flex: 1;        
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      footer .button {
+        margin: 0 6px;
+      }
+
+      .button {
+        display: block;
+        position: relative;
+        background-color: transparent;
+        padding: 14px;
+        text-decoration: none;
+        transition: 0.3s all;
+        height: 36px;
+        width: 36px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+      }
+
+      .button:hover, .button:active {
+        color: white;
+      }
+
+      .button:before {
+        transition: 0.3s all;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        right: 50%;
+        bottom:50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        content: "";
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      .button:hover:before, .button:active:before {
+        top:0%;
+        left: 0%;
+        right: 0%;
+        bottom:0%;
+      }
+
+      .link {
+        color: var(--text-color);
+        transition: 0.3s color;
+      }
+
+      .link:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    </style>
+
+    <header>
+      <nav>
+        <h3>Lots of People</h3>
+      </nav>
+    </header>
+ 
+    <main>
+      <h2>
+        <span>Beginners mind</span><br><span>= mastermind</span>
+      </h2>
+      <h1>Strategy, communication, design and development<br> for brands, startups and cultural organisations</h1>   
+    </main>
+
+    <footer>
+
+      <nav>
+
+      <a 
+        class="button"
+        href="https://firebasestorage.googleapis.com/v0/b/lots-of-people.appspot.com/o/Lots_PortfolioOkt2016.pdf?alt=media&token=726d7895-4eaf-4c51-b715-923f2a82e070"
+        title="Download our portfolio"
+        download
+      >
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.978 29.978">
+          <g>
+              <path d="M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012v-8.861H25.462z"/>
+              <path d="M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193C15.092,18.979,14.62,18.426,14.62,18.426z"/>
+          </g>
+      </svg>
+
+      </a>
+
+      <a
+        class="button"
+        href="https://vimeo.com/lotsofpeople"
+        target="_blank"
+        title="Watch our video's on Vimeo"
+      >
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.847 20.847">
+          <path d="M17.811,2.018c2.017,0.053,3.026,1.198,3.036,3.438c0,0.147-0.005,0.3-0.013,0.457c-0.089,1.899-1.502,4.486-4.245,7.76c-2.829,3.43-5.229,5.147-7.2,5.156c-1.226,0-2.244-1.05-3.061-3.151l-0.858-2.88L4.622,9.922C3.997,7.838,3.329,6.798,2.616,6.798c-0.156,0-0.697,0.304-1.626,0.91L0,6.537l1.536-1.276l1.511-1.263C4.4,2.914,5.429,2.328,6.135,2.241c0.094-0.01,0.188-0.013,0.284-0.013c1.449,0,2.354,1.041,2.709,3.124C9.326,6.54,9.49,7.506,9.623,8.248C9.752,8.992,9.86,9.51,9.946,9.805c0.479,1.97,0.995,2.96,1.55,2.968c0.426,0,1.082-0.642,1.968-1.926c0.866-1.319,1.332-2.296,1.392-2.932c0.019-0.129,0.026-0.25,0.026-0.362c0-0.861-0.474-1.29-1.418-1.29c-0.479,0-0.99,0.102-1.537,0.299c0.98-3.021,2.864-4.534,5.65-4.544C17.655,2.018,17.732,2.018,17.811,2.018z"/>
+        </svg>
+      </a>
+
+      </nav>
+
+      Contact us at
+      <a
+        class="link"
+        href="mailto:studio@lotsofpeople.nl"
+        title="Send an email to studio@lotsofpeople.nl"
+      >studio@lotsofpeople.nl</a>
+
+    </footer>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'lotsofpeople-website',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'lotsofpeople-website',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
