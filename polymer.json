@@ -1,0 +1,7 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/lotsofpeople-website/lotsofpeople-website.html",
+  "fragments": [
+    "src/lotsofpeople-website/lotsofpeople-website.html"
+  ]
+}
